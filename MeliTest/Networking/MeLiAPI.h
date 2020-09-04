@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ArticlesListResponseModels.h"
+#import "ArticleDetailResponseModels.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)fetchArticles:(NSString *)title
                       completion:(void(^)(ArticlesListResponse *response))completion failure:(void(^)(NSError* error))failure;
+
+- (void)fetchArticleDetail:(NSString *)idArticle
+completion:(void(^)(ArticleDetailResponse *response))completion failure:(void(^)(NSError* error))failure;
 
 @end
 

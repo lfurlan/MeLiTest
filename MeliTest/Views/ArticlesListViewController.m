@@ -61,9 +61,7 @@
             [self.viewModel
              fetchArticles: searchTextString
              completion:^(ArticlesListResponse *response) {
-                //[SVProgressHUD dismiss];
                 [_HUD dismiss];
-                NSLog(@"Response: %@",response);
                 if (response.results != nil){
                     arrayArticles = [response.results mutableCopy];//[[response.results subarrayWithRange:NSMakeRange(0, [response.results count])] mutableCopy];
                     dispatch_async(dispatch_get_main_queue(), ^{
@@ -72,6 +70,7 @@
                 }
             }
              failure:^(NSError *error) {
+                [_HUD dismiss];
                 NSLog(@"Failed: %@",error);
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [arrayArticles removeAllObjects];
@@ -145,9 +144,14 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:
 (NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    ArticleDetailViewController *articleDetail =
-    [self.storyboard instantiateViewControllerWithIdentifier:@"ArticleDetailViewController"];
-    [self.navigationController pushViewController:articleDetail animated:YES];
+    
+    ArticlesListResult *article = arrayArticles[indexPath.row];
+    if (article.identifier != nil) {
+        ArticleDetailViewController *articleDetail =
+        [self.storyboard instantiateViewControllerWithIdentifier:@"ArticleDetailViewController"];
+        [articleDetail getArticleDetail: article.identifier];
+        [self.navigationController pushViewController:articleDetail animated:YES];
+    }
 }
 
 

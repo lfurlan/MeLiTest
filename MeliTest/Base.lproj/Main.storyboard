@@ -209,6 +209,10 @@
                                                                         </collectionViewCellContentView>
                                                                     </collectionViewCell>
                                                                 </cells>
+                                                                <connections>
+                                                                    <outlet property="dataSource" destination="ucd-Ab-Ka6" id="9Z7-cs-VpT"/>
+                                                                    <outlet property="delegate" destination="ucd-Ab-Ka6" id="f7g-wX-ocJ"/>
+                                                                </connections>
                                                             </collectionView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -349,6 +353,10 @@
                                                                         </tableViewCellContentView>
                                                                     </tableViewCell>
                                                                 </prototypes>
+                                                                <connections>
+                                                                    <outlet property="dataSource" destination="ucd-Ab-Ka6" id="Gq9-eJ-8jm"/>
+                                                                    <outlet property="delegate" destination="ucd-Ab-Ka6" id="f3e-AI-cAj"/>
+                                                                </connections>
                                                             </tableView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -395,6 +403,9 @@
                                             <constraint firstAttribute="height" constant="34" id="aLy-HJ-13t"/>
                                         </constraints>
                                         <state key="normal" image="arrow_back"/>
+                                        <connections>
+                                            <action selector="buttonAction:" destination="ucd-Ab-Ka6" eventType="touchUpInside" id="Dcy-1Z-Abt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="AmarilloMeli"/>
@@ -417,6 +428,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BII-k4-elk"/>
                     </view>
+                    <connections>
+                        <outlet property="acceptsMercadopagoLabel" destination="qpD-XL-PUN" id="vvD-PU-btp"/>
+                        <outlet property="attributesTableView" destination="mpe-Lt-dGJ" id="nyP-NO-HYu"/>
+                        <outlet property="collectionView" destination="UtL-3W-s3r" id="pX3-12-Qok"/>
+                        <outlet property="descriptionLabel" destination="5ts-Ln-Thz" id="d62-QR-P78"/>
+                        <outlet property="descriptionTypeArticleCountLabel" destination="gNg-Hc-5JP" id="RL9-UU-WXl"/>
+                        <outlet property="priceLabel" destination="zYg-7T-F4k" id="o3z-1l-QLX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2C-76-oaO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

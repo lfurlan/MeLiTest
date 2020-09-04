@@ -43,5 +43,24 @@ NSString *items = @"items";
     }] resume];
 }
 
+
+- (void)fetchArticleDetail:(NSString *)idArticle
+completion:(void(^)(ArticleDetailResponse *response))completion failure:(void(^)(NSError* error))failure{
+    NSString *urlString =  [NSString stringWithFormat:@"%@://%@/%@?ids=%@", scheme, host, items, idArticle];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    [[session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error){
+        if(error) {
+            failure(error);
+        } else {
+            ArticleDetailResponse *response = ArticleDetailResponseFromData(data, &error);
+            completion(response);
+        }
+        
+    }] resume];
+}
+
 @end
 
