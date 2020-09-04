@@ -7,11 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ArticlesListViewModel.h"
 
-NS_ASSUME_NONNULL_BEGIN
+@interface ArticlesListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+    
+    NSMutableArray *arrayArticles;
+    NSString *searchTextString;
+    
+}
 
-@interface ArticlesListViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
+@property (weak, nonatomic) IBOutlet UIView *placeHolderView;
+
+
+@property (nonatomic, strong) ArticlesListViewModel * viewModel;
+
 
 @end
 
-NS_ASSUME_NONNULL_END

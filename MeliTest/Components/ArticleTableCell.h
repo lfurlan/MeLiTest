@@ -1,8 +1,8 @@
 //
 //  ArticleTableCell.h
-//  MeliTest
+//  PruebaML
 //
-//  Created by Lucas Furlan on 04/09/2020.
+//  Created by Lucas Furlan on 30/08/2020.
 //  Copyright © 2020 Lucas Furlan. All rights reserved.
 //
 

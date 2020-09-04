@@ -34,10 +34,16 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="48" height="34"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                 <state key="normal" title="Buscar"/>
+                                                <connections>
+                                                    <action selector="fetchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ySO-NN-RFS"/>
+                                                </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9HF-Yl-8ER">
                                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="34"/>
                                                 <state key="normal" image="trash" catalog="system"/>
+                                                <connections>
+                                                    <action selector="deleteAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f27-Ba-Wfk"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -53,6 +59,10 @@
                                     <constraint firstItem="nsg-wa-Tjn" firstAttribute="trailing" secondItem="6Ua-H8-sg8" secondAttribute="trailing" constant="-5" id="gvQ-6U-UKA"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Ui-3v-m2R">
+                                <rect key="frame" x="0.0" y="120" width="414" height="776"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gq9-dp-AJg">
                                 <rect key="frame" x="0.0" y="120" width="414" height="776"/>
                                 <subviews>
@@ -62,7 +72,7 @@
                                         <color key="textColor" red="0.66666668650000005" green="0.66666668650000005" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="highlightedColor" name="AmarilloMeli"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_search" translatesAutoresizingMaskIntoConstraints="NO" id="rzb-KB-ysv">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="busqueda" translatesAutoresizingMaskIntoConstraints="NO" id="rzb-KB-ysv">
                                         <rect key="frame" x="182" y="348" width="50" height="100"/>
                                         <color key="tintColor" red="0.7843137255" green="0.7843137255" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -81,10 +91,6 @@
                                     <constraint firstItem="rzb-KB-ysv" firstAttribute="top" secondItem="JpJ-bs-j2g" secondAttribute="bottom" id="yB8-BN-jBR"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Ui-3v-m2R">
-                                <rect key="frame" x="0.0" y="120" width="414" height="776"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -103,6 +109,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="5ps-wH-qQ0"/>
+                    <connections>
+                        <outlet property="deleteButton" destination="9HF-Yl-8ER" id="IBm-7s-hAe"/>
+                        <outlet property="placeHolderView" destination="Gq9-dp-AJg" id="REF-WA-SoV"/>
+                        <outlet property="searchButton" destination="zqh-R1-SbR" id="bMn-Dt-RH4"/>
+                        <outlet property="searchTextField" destination="6Ua-H8-sg8" id="6Yh-54-nEg"/>
+                        <outlet property="tableView" destination="7Ui-3v-m2R" id="4iG-VD-fTN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,7 +138,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="image_search" width="128" height="128"/>
+        <image name="busqueda" width="170.5" height="170.5"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="AmarilloMeli">
             <color red="1" green="0.94509803921568625" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

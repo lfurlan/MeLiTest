@@ -16,8 +16,11 @@
 		182DF08325020AED006E53B5 /* MeliTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF08225020AED006E53B5 /* MeliTestTests.m */; };
 		182DF08E25020AED006E53B5 /* MeliTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF08D25020AED006E53B5 /* MeliTestUITests.m */; };
 		182DF0A225021160006E53B5 /* ArticlesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF0A125021160006E53B5 /* ArticlesListViewController.m */; };
-		182DF0A62502120C006E53B5 /* ArticleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF0A42502120C006E53B5 /* ArticleTableCell.m */; };
-		182DF0A72502120C006E53B5 /* ArticleTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182DF0A52502120C006E53B5 /* ArticleTableCell.xib */; };
+		182DF0AA2502148D006E53B5 /* MeLiAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF0A92502148D006E53B5 /* MeLiAPI.m */; };
+		182DF0AD250215A0006E53B5 /* ArticlesListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF0AC250215A0006E53B5 /* ArticlesListViewModel.m */; };
+		182DF0B025021610006E53B5 /* ArticlesListResponseModels.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF0AF25021610006E53B5 /* ArticlesListResponseModels.m */; };
+		182DF0B425025F22006E53B5 /* ArticleTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182DF0B225025F22006E53B5 /* ArticleTableCell.xib */; };
+		182DF0B525025F22006E53B5 /* ArticleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF0B325025F22006E53B5 /* ArticleTableCell.m */; };
 		4F7806D5E9F03DC8216B8693 /* Pods_MeliTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D49B551CDDBBF657A635AB80 /* Pods_MeliTestTests.framework */; };
 		7E4E8CD6BA9DD701F1ABA1DD /* Pods_MeliTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B741571A659B4B91640267 /* Pods_MeliTest.framework */; };
 		9A0EBAEFA7937DD0D0C04753 /* Pods_MeliTest_MeliTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11E13FF138CBA610EF2120E7 /* Pods_MeliTest_MeliTestUITests.framework */; };
@@ -64,9 +67,15 @@
 		182DF08F25020AED006E53B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182DF0A025021160006E53B5 /* ArticlesListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArticlesListViewController.h; sourceTree = "<group>"; };
 		182DF0A125021160006E53B5 /* ArticlesListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticlesListViewController.m; sourceTree = "<group>"; };
-		182DF0A32502120C006E53B5 /* ArticleTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArticleTableCell.h; sourceTree = "<group>"; };
-		182DF0A42502120C006E53B5 /* ArticleTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticleTableCell.m; sourceTree = "<group>"; };
-		182DF0A52502120C006E53B5 /* ArticleTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableCell.xib; sourceTree = "<group>"; };
+		182DF0A82502148D006E53B5 /* MeLiAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeLiAPI.h; sourceTree = "<group>"; };
+		182DF0A92502148D006E53B5 /* MeLiAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeLiAPI.m; sourceTree = "<group>"; };
+		182DF0AB250215A0006E53B5 /* ArticlesListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArticlesListViewModel.h; sourceTree = "<group>"; };
+		182DF0AC250215A0006E53B5 /* ArticlesListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticlesListViewModel.m; sourceTree = "<group>"; };
+		182DF0AE25021610006E53B5 /* ArticlesListResponseModels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArticlesListResponseModels.h; sourceTree = "<group>"; };
+		182DF0AF25021610006E53B5 /* ArticlesListResponseModels.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticlesListResponseModels.m; sourceTree = "<group>"; };
+		182DF0B125025F22006E53B5 /* ArticleTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTableCell.h; sourceTree = "<group>"; };
+		182DF0B225025F22006E53B5 /* ArticleTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleTableCell.xib; sourceTree = "<group>"; };
+		182DF0B325025F22006E53B5 /* ArticleTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTableCell.m; sourceTree = "<group>"; };
 		4193092197B9E7C6FA379749 /* Pods-MeliTest-MeliTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliTest-MeliTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-MeliTest-MeliTestUITests/Pods-MeliTest-MeliTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A2B741571A659B4B91640267 /* Pods_MeliTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeliTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49B551CDDBBF657A635AB80 /* Pods_MeliTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeliTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +174,8 @@
 		182DF09B25020C72006E53B5 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				182DF0A82502148D006E53B5 /* MeLiAPI.h */,
+				182DF0A92502148D006E53B5 /* MeLiAPI.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -172,9 +183,9 @@
 		182DF09C25020CA1006E53B5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				182DF0A32502120C006E53B5 /* ArticleTableCell.h */,
-				182DF0A42502120C006E53B5 /* ArticleTableCell.m */,
-				182DF0A52502120C006E53B5 /* ArticleTableCell.xib */,
+				182DF0B125025F22006E53B5 /* ArticleTableCell.h */,
+				182DF0B325025F22006E53B5 /* ArticleTableCell.m */,
+				182DF0B225025F22006E53B5 /* ArticleTableCell.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -182,6 +193,8 @@
 		182DF09D25020CB3006E53B5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				182DF0AE25021610006E53B5 /* ArticlesListResponseModels.h */,
+				182DF0AF25021610006E53B5 /* ArticlesListResponseModels.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +202,8 @@
 		182DF09E25020CBC006E53B5 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				182DF0AB250215A0006E53B5 /* ArticlesListViewModel.h */,
+				182DF0AC250215A0006E53B5 /* ArticlesListViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -332,7 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				182DF07625020AED006E53B5 /* LaunchScreen.storyboard in Resources */,
-				182DF0A72502120C006E53B5 /* ArticleTableCell.xib in Resources */,
+				182DF0B425025F22006E53B5 /* ArticleTableCell.xib in Resources */,
 				182DF07325020AED006E53B5 /* Assets.xcassets in Resources */,
 				182DF07125020AEB006E53B5 /* Main.storyboard in Resources */,
 			);
@@ -428,9 +443,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182DF0AD250215A0006E53B5 /* ArticlesListViewModel.m in Sources */,
+				182DF0B525025F22006E53B5 /* ArticleTableCell.m in Sources */,
 				182DF06825020AEB006E53B5 /* AppDelegate.m in Sources */,
+				182DF0AA2502148D006E53B5 /* MeLiAPI.m in Sources */,
 				182DF0A225021160006E53B5 /* ArticlesListViewController.m in Sources */,
-				182DF0A62502120C006E53B5 /* ArticleTableCell.m in Sources */,
+				182DF0B025021610006E53B5 /* ArticlesListResponseModels.m in Sources */,
 				182DF07925020AED006E53B5 /* main.m in Sources */,
 				182DF06B25020AEB006E53B5 /* SceneDelegate.m in Sources */,
 			);
