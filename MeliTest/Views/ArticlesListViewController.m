@@ -9,6 +9,7 @@
 #import "ArticlesListViewController.h"
 #import "MeLiAPI.h"
 #import "ArticleTableCell.h"
+#import "ArticleDetailViewController.h"
 
 
 
@@ -139,5 +140,15 @@
     
     return cell;
 }
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:
+(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    ArticleDetailViewController *articleDetail =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"ArticleDetailViewController"];
+    [self.navigationController pushViewController:articleDetail animated:YES];
+}
+
 
 @end
