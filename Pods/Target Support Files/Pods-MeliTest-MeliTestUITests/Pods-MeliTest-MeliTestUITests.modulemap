@@ -1,0 +1,6 @@
+framework module Pods_MeliTest_MeliTestUITests {
+  umbrella header "Pods-MeliTest-MeliTestUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
