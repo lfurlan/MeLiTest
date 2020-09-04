@@ -6,6 +6,7 @@ target 'MeliTest' do
   use_frameworks!
 
   # Pods for MeliTest
+  pod 'JGProgressHUD'
 
   target 'MeliTestTests' do
     inherit! :search_paths

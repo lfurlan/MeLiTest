@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ArticlesListViewModel.h"
+#import "JGProgressHUD.h"
 
 @interface ArticlesListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
     
@@ -24,7 +25,7 @@
 
 
 @property (nonatomic, strong) ArticlesListViewModel * viewModel;
-
+@property (nonatomic, strong) JGProgressHUD *HUD;
 
 @end
 

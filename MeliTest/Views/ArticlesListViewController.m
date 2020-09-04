@@ -11,6 +11,7 @@
 #import "ArticleTableCell.h"
 
 
+
 @interface ArticlesListViewController ()
 
 @end
@@ -33,6 +34,7 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     [self.tableView registerNib:[UINib nibWithNibName:@"ArticleTableCell" bundle:nil] forCellReuseIdentifier:@"ArticleTableCell"];
+    _HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
 }
 
 
@@ -52,29 +54,33 @@
 - (IBAction)fetchAction:(id)sender {
     if(searchTextString.length>0)
     {
-        
-        [self.viewModel
-         fetchArticles: searchTextString
-         completion:^(ArticlesListResponse *response) {
-            //[SVProgressHUD dismiss];
-            NSLog(@"Response: %@",response);
-            if (response.results != nil){
-                arrayArticles = [response.results mutableCopy];//[[response.results subarrayWithRange:NSMakeRange(0, [response.results count])] mutableCopy];
+        _HUD.textLabel.text = @"Loading";
+        [_HUD showInView:self.view];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+            [self.viewModel
+             fetchArticles: searchTextString
+             completion:^(ArticlesListResponse *response) {
+                //[SVProgressHUD dismiss];
+                [_HUD dismiss];
+                NSLog(@"Response: %@",response);
+                if (response.results != nil){
+                    arrayArticles = [response.results mutableCopy];//[[response.results subarrayWithRange:NSMakeRange(0, [response.results count])] mutableCopy];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.tableView reloadData];
+                    });
+                }
+            }
+             failure:^(NSError *error) {
+                NSLog(@"Failed: %@",error);
                 dispatch_async(dispatch_get_main_queue(), ^{
+                    [arrayArticles removeAllObjects];
                     [self.tableView reloadData];
+                    _deleteButton.hidden = YES;
+                    _placeHolderView.hidden = NO;
                 });
             }
-        }
-         failure:^(NSError *error) {
-            NSLog(@"Failed: %@",error);
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [arrayArticles removeAllObjects];
-                [self.tableView reloadData];
-                _deleteButton.hidden = YES;
-                _placeHolderView.hidden = NO;
-            });
-        }
-         ];
+             ];
+        });
     }
 }
 
