@@ -463,7 +463,7 @@
         <image name="credit_card" width="128" height="128"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="AmarilloMeli">
-            <color red="1" green="0.94509803921568625" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.94499999284744263" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
