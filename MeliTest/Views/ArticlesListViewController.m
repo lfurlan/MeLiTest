@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  ArticlesListViewController.m
 //  MeliTest
 //
 //  Created by Lucas Furlan on 04/09/2020.
 //  Copyright © 2020 Lucas Furlan. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ArticlesListViewController.h"
 
-@interface ViewController ()
+@interface ArticlesListViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ArticlesListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

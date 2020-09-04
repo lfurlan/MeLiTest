@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		182DF06825020AEB006E53B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF06725020AEB006E53B5 /* AppDelegate.m */; };
 		182DF06B25020AEB006E53B5 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF06A25020AEB006E53B5 /* SceneDelegate.m */; };
-		182DF06E25020AEB006E53B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF06D25020AEB006E53B5 /* ViewController.m */; };
 		182DF07125020AEB006E53B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182DF06F25020AEB006E53B5 /* Main.storyboard */; };
 		182DF07325020AED006E53B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182DF07225020AED006E53B5 /* Assets.xcassets */; };
 		182DF07625020AED006E53B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182DF07425020AED006E53B5 /* LaunchScreen.storyboard */; };
 		182DF07925020AED006E53B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF07825020AED006E53B5 /* main.m */; };
 		182DF08325020AED006E53B5 /* MeliTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF08225020AED006E53B5 /* MeliTestTests.m */; };
 		182DF08E25020AED006E53B5 /* MeliTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF08D25020AED006E53B5 /* MeliTestUITests.m */; };
+		182DF0A225021160006E53B5 /* ArticlesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF0A125021160006E53B5 /* ArticlesListViewController.m */; };
+		182DF0A62502120C006E53B5 /* ArticleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DF0A42502120C006E53B5 /* ArticleTableCell.m */; };
+		182DF0A72502120C006E53B5 /* ArticleTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182DF0A52502120C006E53B5 /* ArticleTableCell.xib */; };
 		4F7806D5E9F03DC8216B8693 /* Pods_MeliTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D49B551CDDBBF657A635AB80 /* Pods_MeliTestTests.framework */; };
 		7E4E8CD6BA9DD701F1ABA1DD /* Pods_MeliTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B741571A659B4B91640267 /* Pods_MeliTest.framework */; };
 		9A0EBAEFA7937DD0D0C04753 /* Pods_MeliTest_MeliTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11E13FF138CBA610EF2120E7 /* Pods_MeliTest_MeliTestUITests.framework */; };
@@ -49,8 +51,6 @@
 		182DF06725020AEB006E53B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		182DF06925020AEB006E53B5 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		182DF06A25020AEB006E53B5 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		182DF06C25020AEB006E53B5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		182DF06D25020AEB006E53B5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		182DF07025020AEB006E53B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		182DF07225020AED006E53B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		182DF07525020AED006E53B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +62,11 @@
 		182DF08925020AED006E53B5 /* MeliTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeliTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		182DF08D25020AED006E53B5 /* MeliTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeliTestUITests.m; sourceTree = "<group>"; };
 		182DF08F25020AED006E53B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		182DF0A025021160006E53B5 /* ArticlesListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArticlesListViewController.h; sourceTree = "<group>"; };
+		182DF0A125021160006E53B5 /* ArticlesListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticlesListViewController.m; sourceTree = "<group>"; };
+		182DF0A32502120C006E53B5 /* ArticleTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArticleTableCell.h; sourceTree = "<group>"; };
+		182DF0A42502120C006E53B5 /* ArticleTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticleTableCell.m; sourceTree = "<group>"; };
+		182DF0A52502120C006E53B5 /* ArticleTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableCell.xib; sourceTree = "<group>"; };
 		4193092197B9E7C6FA379749 /* Pods-MeliTest-MeliTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliTest-MeliTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-MeliTest-MeliTestUITests/Pods-MeliTest-MeliTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A2B741571A659B4B91640267 /* Pods_MeliTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeliTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49B551CDDBBF657A635AB80 /* Pods_MeliTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeliTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,8 +135,6 @@
 				182DF06725020AEB006E53B5 /* AppDelegate.m */,
 				182DF06925020AEB006E53B5 /* SceneDelegate.h */,
 				182DF06A25020AEB006E53B5 /* SceneDelegate.m */,
-				182DF06C25020AEB006E53B5 /* ViewController.h */,
-				182DF06D25020AEB006E53B5 /* ViewController.m */,
 				182DF06F25020AEB006E53B5 /* Main.storyboard */,
 				182DF07225020AED006E53B5 /* Assets.xcassets */,
 				182DF07425020AED006E53B5 /* LaunchScreen.storyboard */,
@@ -169,6 +172,9 @@
 		182DF09C25020CA1006E53B5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				182DF0A32502120C006E53B5 /* ArticleTableCell.h */,
+				182DF0A42502120C006E53B5 /* ArticleTableCell.m */,
+				182DF0A52502120C006E53B5 /* ArticleTableCell.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -190,6 +196,8 @@
 		182DF09F25020CCE006E53B5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				182DF0A025021160006E53B5 /* ArticlesListViewController.h */,
+				182DF0A125021160006E53B5 /* ArticlesListViewController.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,7 +222,6 @@
 				0BDAA3F75E33753116174DD6 /* Pods-MeliTestTests.debug.xcconfig */,
 				1375CAECA60C88C7ABA437E4 /* Pods-MeliTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -325,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				182DF07625020AED006E53B5 /* LaunchScreen.storyboard in Resources */,
+				182DF0A72502120C006E53B5 /* ArticleTableCell.xib in Resources */,
 				182DF07325020AED006E53B5 /* Assets.xcassets in Resources */,
 				182DF07125020AEB006E53B5 /* Main.storyboard in Resources */,
 			);
@@ -420,8 +428,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				182DF06E25020AEB006E53B5 /* ViewController.m in Sources */,
 				182DF06825020AEB006E53B5 /* AppDelegate.m in Sources */,
+				182DF0A225021160006E53B5 /* ArticlesListViewController.m in Sources */,
+				182DF0A62502120C006E53B5 /* ArticleTableCell.m in Sources */,
 				182DF07925020AED006E53B5 /* main.m in Sources */,
 				182DF06B25020AEB006E53B5 /* SceneDelegate.m in Sources */,
 			);

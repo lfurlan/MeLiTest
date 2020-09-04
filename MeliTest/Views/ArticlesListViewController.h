@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ArticlesListViewController.h
 //  MeliTest
 //
 //  Created by Lucas Furlan on 04/09/2020.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface ArticlesListViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END
