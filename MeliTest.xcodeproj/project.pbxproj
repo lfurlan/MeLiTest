@@ -104,6 +104,11 @@
 		182DF06525020AEB006E53B5 /* MeliTest */ = {
 			isa = PBXGroup;
 			children = (
+				182DF09F25020CCE006E53B5 /* Views */,
+				182DF09E25020CBC006E53B5 /* ViewModels */,
+				182DF09D25020CB3006E53B5 /* Models */,
+				182DF09C25020CA1006E53B5 /* Components */,
+				182DF09B25020C72006E53B5 /* Networking */,
 				182DF06625020AEB006E53B5 /* AppDelegate.h */,
 				182DF06725020AEB006E53B5 /* AppDelegate.m */,
 				182DF06925020AEB006E53B5 /* SceneDelegate.h */,
@@ -135,6 +140,41 @@
 				182DF08F25020AED006E53B5 /* Info.plist */,
 			);
 			path = MeliTestUITests;
+			sourceTree = "<group>";
+		};
+		182DF09B25020C72006E53B5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		182DF09C25020CA1006E53B5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		182DF09D25020CB3006E53B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		182DF09E25020CBC006E53B5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		182DF09F25020CCE006E53B5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
